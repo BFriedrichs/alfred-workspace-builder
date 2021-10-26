@@ -1,0 +1,190 @@
+{
+  "readme": "",
+  "uidata": {
+    "0A211E8D-98B0-4393-84B3-BD769B4D2685": {
+      "xpos": 25,
+      "ypos": 260
+    },
+    "2B905EEA-3D5D-4C5C-822F-B7C586E86E9B": {
+      "xpos": 755,
+      "ypos": 10
+    },
+    "772B182F-042B-4AFF-B6F5-1F576BDA24C7": {
+      "xpos": 265,
+      "ypos": 250
+    },
+    "788E733D-5429-4E56-8886-63E35BA533C5": {
+      "xpos": 585,
+      "ypos": 10
+    },
+    "8A1E1626-D166-4929-9FC3-F86AD2721240": {
+      "xpos": 590,
+      "ypos": 145
+    },
+    "D921AFF4-0BE9-4622-8903-CA4D9BAB1993": {
+      "xpos": 595,
+      "ypos": 280
+    }
+  },
+  "name": "Test",
+  "connections": {
+    "0A211E8D-98B0-4393-84B3-BD769B4D2685": [
+      {
+        "destinationuid": "772B182F-042B-4AFF-B6F5-1F576BDA24C7",
+        "modifiers": 0,
+        "modifiersubtext": "",
+        "vitoclose": false
+      }
+    ],
+    "772B182F-042B-4AFF-B6F5-1F576BDA24C7": [
+      {
+        "destinationuid": "788E733D-5429-4E56-8886-63E35BA533C5",
+        "modifiers": 0,
+        "modifiersubtext": "",
+        "sourceoutputuid": "8BFAC55A-EEAA-4EC3-9556-B232E7DAE46F",
+        "vitoclose": false
+      },
+      {
+        "destinationuid": "8A1E1626-D166-4929-9FC3-F86AD2721240",
+        "modifiers": 0,
+        "modifiersubtext": "",
+        "sourceoutputuid": "DA9606D1-925D-4682-AD5B-3F3E0C0AAF52",
+        "vitoclose": false
+      },
+      {
+        "destinationuid": "D921AFF4-0BE9-4622-8903-CA4D9BAB1993",
+        "modifiers": 0,
+        "modifiersubtext": "",
+        "sourceoutputuid": "AE9458DF-B41F-4433-9953-D6BADC00C221",
+        "vitoclose": false
+      }
+    ],
+    "788E733D-5429-4E56-8886-63E35BA533C5": [
+      {
+        "destinationuid": "2B905EEA-3D5D-4C5C-822F-B7C586E86E9B",
+        "modifiers": 0,
+        "modifiersubtext": "",
+        "vitoclose": false
+      }
+    ]
+  },
+  "createdby": "Björn Friedrichs",
+  "webaddress": "https:\/\/bjornf.dev",
+  "bundleid": "dev.bjornf.workspaces",
+  "objects": [
+    {
+      "config": {
+        "script": "set currentWindow to \"\"\nif application \"iTerm\" is not running then\n  tell application \"iTerm\"\n    activate\n    delay 1\n    set currentWindow to window 1\n  end tell\nelse\n  tell application \"iTerm\"\n    set currentWindow to (create window with default profile)\n  end tell\nend if\ntell application \"iTerm\"\n  tell current session of currentWindow\n    write text \"123\"\n  end tell\n  add_window(\"iTerm\", currentWindow) of me\nend tell",
+        "escaping": 68,
+        "scriptfile": "",
+        "scriptargtype": 1,
+        "type": 6,
+        "concurrently": false
+      },
+      "uid": "788E733D-5429-4E56-8886-63E35BA533C5",
+      "type": "alfred.workflow.action.script",
+      "version": 2
+    },
+    {
+      "config": {
+        "script": "set currentWindow to \"\"\nif application \"iTerm\" is not running then\n  tell application \"iTerm\"\n    activate\n    delay 1\n    set currentWindow to window 1\n  end tell\nelse\n  tell application \"iTerm\"\n    set currentWindow to (create window with default profile)\n  end tell\nend if\ntell application \"iTerm\"\n  tell current session of currentWindow\n    write text \"123\"\n  end tell\n  add_window(\"iTerm\", currentWindow) of me\nend tell",
+        "escaping": 68,
+        "scriptfile": "",
+        "scriptargtype": 1,
+        "type": 6,
+        "concurrently": false
+      },
+      "uid": "2B905EEA-3D5D-4C5C-822F-B7C586E86E9B",
+      "type": "alfred.workflow.action.script",
+      "version": 2
+    },
+    {
+      "config": {
+        "script": "set currentWindow to \"\"\nif application \"iTerm\" is not running then\n  tell application \"iTerm\"\n    activate\n    delay 1\n    set currentWindow to window 1\n  end tell\nelse\n  tell application \"iTerm\"\n    set currentWindow to (create window with default profile)\n  end tell\nend if\ntell application \"iTerm\"\n  tell current session of currentWindow\n    write text \"123\"\n  end tell\n  add_window(\"iTerm\", currentWindow) of me\nend tell",
+        "escaping": 68,
+        "scriptfile": "",
+        "scriptargtype": 1,
+        "type": 3,
+        "concurrently": false
+      },
+      "uid": "8A1E1626-D166-4929-9FC3-F86AD2721240",
+      "type": "alfred.workflow.action.script",
+      "version": 2
+    },
+    {
+      "config": {
+        "conditions": [
+          {
+            "matchmode": 0,
+            "inputstring": "",
+            "uid": "8BFAC55A-EEAA-4EC3-9556-B232E7DAE46F",
+            "outputlabel": "Run Test",
+            "matchstring": "test",
+            "matchcasesensitive": false
+          },
+          {
+            "matchmode": 0,
+            "inputstring": "",
+            "uid": "DA9606D1-925D-4682-AD5B-3F3E0C0AAF52",
+            "outputlabel": "Run PhD",
+            "matchstring": "phd",
+            "matchcasesensitive": false
+          },
+          {
+            "matchmode": 0,
+            "inputstring": "",
+            "uid": "AE9458DF-B41F-4433-9953-D6BADC00C221",
+            "outputlabel": "Run Simply Do",
+            "matchstring": "simplydo",
+            "matchcasesensitive": false
+          }
+        ],
+        "elselabel": "else"
+      },
+      "uid": "772B182F-042B-4AFF-B6F5-1F576BDA24C7",
+      "type": "alfred.workflow.utility.conditional",
+      "version": 1
+    },
+    {
+      "config": {
+        "argumenttrimmode": 0,
+        "keyword": "ws",
+        "escaping": 68,
+        "scriptargtype": 1,
+        "queuedelayimmediatelyinitially": true,
+        "queuedelaymode": 0,
+        "argumenttreatemptyqueryasnil": true,
+        "argumenttype": 0,
+        "script": "def filter_func(workspaces):\n  import sys\n  import json\n\n  query = sys.argv[1]\n  items = []\n  for workspace in workspaces:\n    items.append({\n      'title': workspace['name'],\n      'subtitle': workspace['description'],\n      'arg': workspace['id']\n    })\n\n  sys.stdout.write(json.dumps(items))\n\nfilter_func([])",
+        "queuemode": 1,
+        "alfredfiltersresultsmatchmode": 0,
+        "runningsubtext": "",
+        "title": "",
+        "subtext": "",
+        "type": 3,
+        "scriptfile": "",
+        "alfredfiltersresults": false,
+        "queuedelaycustom": 3,
+        "withspace": true
+      },
+      "uid": "0A211E8D-98B0-4393-84B3-BD769B4D2685",
+      "type": "alfred.workflow.input.scriptfilter",
+      "version": 3
+    },
+    {
+      "config": {
+        "script": "set currentWindow to \"\"\nif application \"iTerm\" is not running then\n  tell application \"iTerm\"\n    activate\n    delay 1\n    set currentWindow to window 1\n  end tell\nelse\n  tell application \"iTerm\"\n    set currentWindow to (create window with default profile)\n  end tell\nend if\ntell application \"iTerm\"\n  tell current session of currentWindow\n    write text \"123\"\n  end tell\n  add_window(\"iTerm\", currentWindow) of me\nend tell",
+        "escaping": 68,
+        "scriptfile": "",
+        "scriptargtype": 1,
+        "type": 6,
+        "concurrently": false
+      },
+      "uid": "D921AFF4-0BE9-4622-8903-CA4D9BAB1993",
+      "type": "alfred.workflow.action.script",
+      "version": 2
+    }
+  ],
+  "disabled": false,
+  "description": "Descript"
+}

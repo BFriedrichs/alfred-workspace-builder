@@ -1,0 +1,4 @@
+extenson = '.py'
+wrapper = """
+{script}
+"""
